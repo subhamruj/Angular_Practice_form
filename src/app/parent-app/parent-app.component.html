@@ -1,10 +1,18 @@
-<div class="contaciner">
+<div class="container">
   <h1>User Form</h1>
   <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
     <div class="form-group">
-      <label>Name</label>
-      <input type="text" class="form-control" name="Name" [(ngModel)] = "myName">
       <p>{{myName}}</p>
+      <label>Name</label>
+      <input type="text" #pname="ngModel" required minlength="3" class="form-control" name="Name" [(ngModel)] = "myName">
+      <div *ngIf="pname.errors && (pname.dirty || pname.touched)">
+        <div [hidden]="!pname.errors.required">
+          Please enter a name
+        </div>
+        <div [hidden]="!pname.errors.minlength">
+          Please enter atleast 3 characters
+        </div>
+      </div>
     </div>
     <div class="form-group">
         <label>Email</label>
@@ -24,6 +32,6 @@
             <input type="text" class="form-control" name="PostalCode" ngModel>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button [disabled]="!userForm.valid" type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

@@ -1,0 +1,22 @@
+input.ng-invalid{
+    border-left: 2px solid red;
+}
+input.ng-valid{
+    border-left: 2px solid green;
+}
+.form-control{
+    width: 500px;
+}
+.alert{
+    width: 500px;
+}
+.btn-primary:disabled {
+    color: #3e3535;
+    background-color: lightgray;
+    cursor:not-allowed;
+    /* border-color: #007bff; */
+}
+
+/* .container{
+    position: relative;
+} */

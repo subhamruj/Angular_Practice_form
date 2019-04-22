@@ -1,0 +1,10 @@
+.form-control{
+    width: 500px;
+}
+
+input.ng-invalid{
+    border-left: 2px solid red;
+}
+input.ng-valid{
+    border-left: 2px solid green;
+}
