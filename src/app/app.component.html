@@ -1,7 +1,13 @@
 <div>
   <h1>{{message}}</h1>
 </div>
-<app-parent-form></app-parent-form>
+<div class="navmenu">
+    <nav routerLink="/child-app" routerLinkActive="active">child-app</nav>&nbsp;&nbsp;&nbsp;
+    <nav routerLink="/parent-app" routerLinkActive="active">parent-app</nav>&nbsp;&nbsp;&nbsp;
+    <nav routerLink="/parent-form" routerLinkActive="active">parent-form</nav>&nbsp;&nbsp;&nbsp;
+    <nav routerLink="/studentview" routerLinkActive="active">studentview</nav><br>    
+</div>
+<!-- <app-parent-form></app-parent-form> -->
 <!-- <app-parent-app></app-parent-app> -->
 <!-- <app-child-app (childData)="message=$event" [parentData]='name'></app-child-app> -->
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet> 

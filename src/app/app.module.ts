@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { ParentAppComponent } from './parent-app/parent-app.component';
 import { ChildAppComponent } from './child-app/child-app.component';
 import { ParentFormComponent } from './parent-form/parent-form.component';
-
+import { StudentviewComponent } from './studentview/studentview.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,14 @@ import { ParentFormComponent } from './parent-form/parent-form.component';
     ParentAppComponent,
     ChildAppComponent,
     ParentFormComponent,
+    StudentviewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
